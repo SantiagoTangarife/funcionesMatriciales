@@ -3,13 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/saxss/AndroidStudioProjects/funcionesMatriciales/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/saxss/AndroidStudioProjects/funcionesMatriciales/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/saxss/AndroidStudioProjects/funcionesMatriciales/app/src/main/res/layout/activity_pagos.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/saxss/AndroidStudioProjects/funcionesMatriciales/app/src/main/res/layout/activity_vista.xml" value="0.33" />
         <entry key="..\:/Users/saxss/AndroidStudioProjects/funcionesMatriciales/app/src/main/res/layout/fila.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/saxss/AndroidStudioProjects/funcionesMatriciales/app/src/main/res/layout/fila_elemento.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/saxss/AndroidStudioProjects/funcionesMatriciales/app/src/main/res/layout/item_elemento.xml" value="0.33" />
         <entry key="..\:/Users/saxss/AndroidStudioProjects/funcionesMatriciales/app/src/main/res/layout/item_pago.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/saxss/AndroidStudioProjects/funcionesMatriciales/app/src/main/res/layout/item_producto.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/saxss/AndroidStudioProjects/funcionesMatriciales/app/src/main/res/layout/item_producto.xml" value="0.21" />
       </map>
     </option>
   </component>
