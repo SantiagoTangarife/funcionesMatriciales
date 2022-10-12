@@ -1,16 +1,14 @@
 package co.edu.udea.compumovil.funcionesmatriciales
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_vista.*
 import java.io.File
-import java.lang.reflect.Array.get
-import java.lang.reflect.Array.set
 import java.util.*
-import kotlin.collections.ArrayList
+import org.apache.commons.math3.fraction.BigFraction;
 
 
 class MainActivity : AppCompatActivity() {
@@ -35,6 +33,8 @@ class MainActivity : AppCompatActivity() {
             val MatrizCuadrada=MatrizOrignal()
             val v=MatrizU(MatrizCuadrada)
             Resultado=Mostrar(v)
+
+
             val intent: Intent = Intent(this,VistaActivity::class.java)
             startActivity(intent)
 
@@ -102,6 +102,9 @@ class MainActivity : AppCompatActivity() {
 */
 
     }
+
+
+
     fun Determinante(MatrizCuadrada: ArrayList<FloatArray>){
 
         val MatrizTriangular=MatrizU(MatrizCuadrada)
@@ -280,18 +283,27 @@ class MainActivity : AppCompatActivity() {
     fun Mostrar(MatrizCuadradaM: ArrayList<FloatArray>): ArrayList<Producto> {
         var listap= ArrayList<Producto>()
         for (j in MatrizCuadradaM.indices) {
-            var linea="\n| "
+            var linea="\n|"
             //println(" | ")
             for (i in MatrizCuadradaM[j].indices) {
-                var cont=MatrizCuadradaM[j][i].toString()
-                if(cont.length>=6){
+
+
+                //cont=MatrizCuadradaM[j][i] cont tiene los decimasles y los convierto a fraccion aqui
+                var contador=MatrizCuadradaM[j][i].toDouble()
+                contador= Math.round(contador*1000)/1000.toDouble()//maximo 3 decimales
+                //System.out.printf("%s%n", BigFraction(contador, 0.00000002, 10000))
+                var strin=BigFraction(contador, 0.00000002, 10000)
+                //println(strin)
+
+                var cont=strin.toString()
+                /*if(cont.length>=6){
                     cont= cont.subSequence(0, 6) as String
                 }
                 else{
                     val i=6-cont.length
                     cont=" ".repeat(i/2)+cont+" ".repeat(i/2)
-                }
-                linea=linea+cont+"| "
+                }*/
+                linea=linea+cont+"|"
 
 
             }
@@ -303,6 +315,8 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
+
 
         return listap
 
